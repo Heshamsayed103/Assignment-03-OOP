@@ -127,9 +127,9 @@ namespace Assignment_03_OOP
             //INotificationService pushService = new PushNotificationService();
 
 
-            //emailService.SendNotification("user@example.com", "Welcome via Email!");
-            //smsService.SendNotification("+20123456789", "Welcome via SMS!");
-            //pushService.SendNotification("User123", "Welcome via Push Notification!");
+            //emailService.SendNotification("HeshamSayed5830.com", "Welcome via Email!");
+            //smsService.SendNotification("+201125515415", "Welcome via SMS!");
+            //pushService.SendNotification("User5838", "Welcome via Push Notification!");
 
             #endregion
 
@@ -146,6 +146,6 @@ namespace Assignment_03_OOP
 
 
 
-}
+    }
     }
 
