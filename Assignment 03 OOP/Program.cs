@@ -11,141 +11,295 @@ namespace Assignment_03_OOP
     {
         static void Main()
         {
-            //========================= PART 01 ====================================//
-
-            #region Question 1:
-            //
-            //what is the primary purpose of an interface in C#?
-
-            //a) To provide a way to implement multiple inheritance 
-            #endregion
-
-            #region Question 2:
-            //  Which of the following is NOT a valid access modifier for interface members in C#?
-
-            //a) private
-
-            #endregion
-
-            #region Question 3:
-            // Can an interface contain fields in C#?
-
-            //b) No 
-            #endregion
-
-            #region Question 4:
-            //In C#, can an interface inherit from another interface?
-
-            // b) Yes, interfaces can inherit from multiple interfaces
-
-            #endregion
-
-            #region Question 5:
-            // Which keyword is used to implement an interface in a class in C#?
-
-            // d) implements 
-            #endregion
-
-            #region Question 6 :
-            // Can an interface contain static methods in C#?
-
-            //  a) Yes 
-            #endregion
-
-            #region Question 7 :
-            //  In C#, can an interface have explicit access modifiers for its members?
-
-            //  b) No, all members are implicitly public
-
-            #endregion
-
-            #region Quesiton 8 :
-            //  What is the purpose of an explicit interface implementation in C#?
-
-            // a) To hide the interface members from outside access 
-            #endregion
-
-            #region Quesiton 9 :
-            //  In C#, can an interface have a constructor?
-
-            // b) No, interfaces cannot have constructors
-
-            #endregion
-
-            #region Question 10 :
-            // How can a C# class implement multiple interfaces?
-
-            // c) By separating interface names with commas 
-            #endregion
+            // 1. Class
+            // 2. Struct
+            // 3. Enum 
+            // 4. Interface
 
 
-            //================================PART 02 ===============================//
 
-            #region Question 01
+            ////static void Print10Numbers(SeriesByTwo series)
+            ////{
+            ////    for (int i = 0;i<10;i++)
+            ////    {
+            ////        Console.Write($"{series.Current} ");
+            ////        series.Next();
+            ////    }
+            ////    Console.WriteLine();
+            ////    series.Reset();
 
-            //ICircle circle = new Circle(5);
-            //circle.DisplayShapeInfo();
+            ////}
 
-            //IRectangle rectangle = new Rectangle(4, 6);
-            //rectangle.DisplayShapeInfo(); 
+            //static void Print10Numbers(SeriesByThree series)
+            //{
+            //    for (int i = 0; i < 10; i++)
+            //    {
+            //        Console.Write($"{series.Current} ");
+            //        series.Next();
+            //    }
+            //    Console.WriteLine();
+            //    series.Reset();
 
-            #endregion
+            //}
 
-            #region Question 02
+            //static void Print10Numbers(SeriesByFour series)
+            //{
+            //    for (int i = 0; i < 10; i++)
+            //    {
+            //        Console.Write($"{series.Current} ");
+            //        series.Next();
+            //    }
+            //    Console.WriteLine();
+            //    series.Reset();
+
+            //}
+
+            static void Print10Numbers(Iseries series)
+            {
+                for (int i = 0; i < 10; i++)
+                {
+                    Console.Write($"{series.Current} ");
+                    series.Next();
+                }
+                Console.WriteLine();
+                series.Reset();
+
+            }
+            static void Main()
+            {
+                #region Interface EX01:
+
+                //// Interface : Reference Type 
+                //// Code Contract Betwen The Developer Who Write It And Who Use It [Implemantion]
+
+                ////IMyType myType = new IMyType();
+
+                //// NOT : Can Not Create Object From Any Interfaces
+
+                ////MyType myType = new MyType();
+
+                ////myType.Salary = 12000;
+                ////Console.WriteLine(myType.Salary);
+                ////myType.MyFun();
 
 
-            //IAuthenticationService authService = new BasicAuthenticationService();
+                //IMyType myType;
+                //// Ref --> Can Refer To Object From Any Class Which Implemented The Interface 'IMyType'
+
+                //myType = new MyType();
+
+                //myType.Salary = 12000;
+                //myType.Print();
+                //myType.MyFun();
+                //Console.WriteLine(myType.Salary); 
+                #endregion
+
+                #region Interface EX02:
+
+                ////SeriesByTwo seriesByTwo = new SeriesByTwo();
+
+                ////Print10Numbers(seriesByTwo);
 
 
-            //string username = "Hesham1";
-            //string password = "admin5838"
-            //string role = "Admin";
+                ////SeriesByThree seriesByThree = new SeriesByThree();
 
-            //bool isAuthenticated = authService.AuthenticateUser(username, password);
-            //Console.WriteLine($"Authentication for {username}: {isAuthenticated}");
+                ////Print10Numbers(seriesByThree);
 
-            //bool isAuthorized = authService.AuthorizeUser(username, role);
-            //Console.WriteLine($"Authorization for {username} as {role}: {isAuthorized}");
+                ////SeriesByFour seriesByFour = new SeriesByFour();
 
-            //Console.WriteLine();
+                ////Print10Numbers(seriesByFour);
 
+                ////int[] Number = { 1, 2, 7, 8,4,5,67, 9 };
 
-            //username = "hesham";
-            //password = "wrongpassword";
-            //role = "Admin";
+                ////Array.Sort(Number);
 
-            //isAuthenticated = authService.AuthenticateUser(username, password);
-            //Console.WriteLine($"Authentication for {username}: {isAuthenticated}");
+                ////foreach (int number in Number)
+                ////{
+                ////    Console.Write(number);
 
-            //isAuthorized = authService.AuthorizeUser(username, role);
-            //Console.WriteLine($"Authorization for {username} as {role}: {isAuthorized}"); 
-            #endregion
-
-            #region Question 03
-            //INotificationService emailService = new EmailNotificationService();
-            //INotificationService smsService = new SmsNotificationService();
-            //INotificationService pushService = new PushNotificationService();
+                ////}
 
 
-            //emailService.SendNotification("HeshamSayed5830.com", "Welcome via Email!");
-            //smsService.SendNotification("+201125515415", "Welcome via SMS!");
-            //pushService.SendNotification("User5838", "Welcome via Push Notification!");
+                //Employee[] employees = new Employee[3]
 
-            #endregion
+                //{
+                //    new Employee(){ Id =1 , Name ="Ahmed" , Age =30 , Salary =12000  },
+                //    new Employee(){ Id =2 , Name ="Fares" , Age =27 , Salary =11000  },
+                //    new Employee(){ Id =3 , Name ="Ali"   , Age =28 , Salary =13000  }
+
+                //};
+
+                //Array.Sort(employees);
+
+                //foreach (Employee item in employees)
+                //{
+                //    Console.Write(item);
+
+                //} 
+                #endregion
+
+                #region Interface EX03:
+
+                ////Car car = new Car();
+
+                ////car.Speed = 150;
+                ////car.Forword();
+
+                //AirPlan airplan = new AirPlan();
+
+                //IMoveable moveable = airplan;
+
+                //moveable.Forword();
+
+                //IFlyable flyable = airplan;
+
+                //flyable.Forword(); 
+                #endregion
+
+                #region Shallow Copy Vs Deep Copy
+                //  //// Shallow Copy Vs Deep Copy
+
+                //  //int[] Arr01 = { 1, 2, 3 };
+                //  //int[] Arr02 = { 4, 5, 6 };
+
+                //  //string[] Arr01 = { "Ahmed", "Ali", "Omer" };
+                //  //string[] Arr02 = { "Fares", "Tamer", "Belal" };
+
+                //  StringBuilder[] Arr01 = new StringBuilder[]
+                //  {
+                //   new StringBuilder("Ahmed"),
+                //   new StringBuilder("Ali"),
+                //   new StringBuilder("Fares")
+                //  };
+
+                //  StringBuilder[] Arr02 = new StringBuilder[]
+                //{
+                //   new StringBuilder("Omer"),
+                //   new StringBuilder("Tamer"),
+                //   new StringBuilder("Amer")
+                //};
+
+                //  Console.WriteLine($"Arr01 {Arr01.GetHashCode()}");
+                //  Console.WriteLine($"Arr02 {Arr02.GetHashCode()}");
+
+                //  Arr02 = (StringBuilder[])Arr01.Clone(); // Shallow Copy
+                //  // Copy Identity
+                //  // {1,2,3} --> Has Two Rerencese Arr01,Arr02
+                //  // {4,5,6} --> UnReahable object 
+                //  Console.WriteLine();
+                //  Console.WriteLine($"Arr01 {Arr01.GetHashCode()}");
+                //  Console.WriteLine($"Arr02 {Arr02.GetHashCode()}");
+
+                //  //// Identity (Address)+ Object State (Data ) 
+
+                //  Arr02[0].Append("Ahmed Amin");
+                //  Console.WriteLine(Arr01[0]);
+                //  Console.WriteLine(Arr02[0]);
+
+
+                //  //====================================
+
+                //  // Shallow Copy Vs Deep Copy
+
+                //  //int[] Arr01 = { 1, 2, 3 };
+                //  //int[] Arr02 = { 4, 5, 6 };
+
+                //  //Console.WriteLine($"Arr01 {Arr01.GetHashCode()}");
+                //  //Console.WriteLine($"Arr02 {Arr02.GetHashCode()}");
+
+                //  //Arr02 = (int[])Arr01.Clone(); // Deep Copy
+                //  //// Clone Methode Will Copy The Object state Of The Caller
+                //  //// Assign The New Object To Arr02 , Will Genarate NEW Identity
+
+                //  //Console.WriteLine();
+                //  //Console.WriteLine($"Arr01 {Arr01.GetHashCode()}");
+                //  //Console.WriteLine($"Arr02 {Arr02.GetHashCode()}");
+
+                //  //// Identity (Address)+ Object State (Data ) 
+
+                //  //Arr02[0] = 100;
+                //  //Console.WriteLine(Arr01[0]); 
+                #endregion
+
+                #region Bulit In Interface IClonable
+
+                //Employee E01 = new Employee() { Id = 1 ,Name = "Ahmed", Age= 27,Salary =12000};
+                //Employee E02 = new Employee() { Id = 2, Name = "Ali", Age = 29, Salary = 11000 };
+
+                ////E01 =E02; // Shallow Copy 
+
+                //E01 = (Employee)E02.Clone(); // Deep Copy 
+                //E01.Salary = 5;
+
+                //Console.WriteLine(E01.GetHashCode()); 
+                //Console.WriteLine(E02.GetHashCode());
+                //Console.WriteLine(E01);
+                //Console.WriteLine(E02); 
+                #endregion
+
+                #region Bulit In Interface ICompareable
+
+                //Employee[] employees = new Employee[3]
+
+                //{
+                //    new Employee(){ Id =1 , Name ="Ahmed" , Age =30 , Salary =12000  },
+                //    new Employee(){ Id =2 , Name ="Fares" , Age =27 , Salary =11000  },
+                //    new Employee(){ Id =3 , Name ="Ali"   , Age =28 , Salary =13000  }
+
+                //};
+
+                //Array.Sort(employees);
+
+                ////int X = employees[0].CompareTo (employees[1]);
+                ////// +ve : Caller Greater Than Parameter
+                ////// -ve : Caller Less Than Parameter
+                //////  0  : Caller Equal Parameter
+
+                ////Console.WriteLine(X); 
+
+                //foreach (Employee item in employees)
+                //{
+                //    Console.Write(item);
+
+                //} 
+                #endregion
+
+                #region Last Example
+
+                //Employee[] employees = new Employee[3]
+
+                //{
+                //    new Employee(){ Id =1 , Name ="Ahmed" , Age =30 , Salary =12000  },
+                //    new Employee(){ Id =2 , Name ="Fares" , Age =27 , Salary =11000  },
+                //    new Employee(){ Id =3 , Name ="Ali"   , Age =28 , Salary =13000  }
+
+                //};
+
+                //Array.Sort(employees, new EmployeeComparerSalary());
+
+                //foreach (Employee item in employees)
+                //{
+                //    Console.Write(item); 
+                //}
+                #endregion
+
+
+
+
+            }
+
+
+
+
+
+
+
+
+
 
 
         }
-
-
-
-
-
-
-
-
-
-
-
     }
-    }
+}
+   
 
