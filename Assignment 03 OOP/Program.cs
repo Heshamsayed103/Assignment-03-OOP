@@ -97,8 +97,8 @@ namespace Assignment_03_OOP
             //IAuthenticationService authService = new BasicAuthenticationService();
 
 
-            //string username = "admin";
-            //string password = "admin123";
+            //string username = "Hesham1";
+            //string password = "admin5838"
             //string role = "Admin";
 
             //bool isAuthenticated = authService.AuthenticateUser(username, password);
@@ -110,7 +110,7 @@ namespace Assignment_03_OOP
             //Console.WriteLine();
 
 
-            //username = "user";
+            //username = "hesham";
             //password = "wrongpassword";
             //role = "Admin";
 
